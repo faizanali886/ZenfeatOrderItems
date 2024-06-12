@@ -36,14 +36,3 @@ jobs:
         name: app-build
         path: path/to/build/directory
 
-  deploy:
-    needs: build
-    runs-on: ubuntu-latest
-    steps:
-    - name: Download Build Artifacts
-      uses: actions/download-artifact@v2
-      with:
-        name: app-build
-        path: path/to/deployment/directory
-
-    # Add deployment steps here, like deploying to a cloud service or server.
